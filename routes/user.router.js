@@ -5,8 +5,10 @@ const {
     fetchUserbyEmail,
     updateUser,
     deleteUser,
+    login,
   } = require("../controller/user.controller");
 router.post("/", createUser);
+router.post("/login", login);
 router.get("/", fetchUser);
 router.get("/:email", fetchUserbyEmail);
 router.patch("/", updateUser);

@@ -38,13 +38,13 @@ module.exports = {
 
   getuserbyEmail: (email,callBack) => {
     pool.query(
-      `select id,firstName,lastName,gender,email,number from registration where email=?`,
+      `select*from registration where email=?`,
       [email],
       (error, results, fields) => {
         if (error) {
           callBack(error);
         }
-        return callBack(null, results);
+        return callBack(null, results[0]);
       }
     );
   },
