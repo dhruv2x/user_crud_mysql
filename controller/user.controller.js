@@ -25,7 +25,7 @@ module.exports = {
           message: "invalid email or password",
         });
       }
-      console.log("body pin is" +body.passwords);
+      console.log("body pin is" +body.password);
 
       console.log("res pin is" + results.password);
 
